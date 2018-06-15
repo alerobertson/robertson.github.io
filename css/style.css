@@ -1,0 +1,10 @@
+body {
+	margin:0;
+	padding:0;
+	background:#C6FFC6;
+}
+.block1 {
+	background:#C6FEEE;
+	min-width:600px;
+	min-height:600px;
+}
