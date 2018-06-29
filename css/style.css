@@ -3,14 +3,45 @@ body, html {
 	margin:0;
 	padding:0;
 	/*background:#222;*/
-	font-size:16px;
-	font-family:"Lucida Console", Monaco, monospace;
+	font-size: 16px;
+	font-family: "Lucida Console", Monaco, monospace;
 	font-weight: 400;
-	line-height:1.8em;
+	line-height: 1.8em;
 }
-.pimg1, .pimg2 {
+.wrap {
 	position:relative;
-	opacity:0.8;
+}
+.slide {
+	width:100%;
+	position:relative;
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.slide1 {
+	background-image: url(../images/back2.png);
+}
+.slide2 {
+	background-image: url(../images/back-.png);
+}
+.arrow{
+	position:relative;
+	top: 50%;
+	cursor: pointer;
+	width:0;
+	height:0;
+	border-style:solid;
+}
+.slide-content{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.pimg1, .pimg2, .pimg3, .pimg4, .pimg5{
+	position:relative;
+	opacity:0.9;
 	background-position:center;
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -18,21 +49,24 @@ body, html {
 }
 .section {
 	text-align: center;
-	padding:50px 80px;
+	padding:10px 30px;
 }
 .section-light {
-	background-color:#f4f4f4;
+	background-color:#111;
 	color:#666;
+	height:200px;
 }
 .section-dark {
-	background-color:#666;
-	color:#f4f4f4 ;
+	background-color:#111;
+	color:#f4f4f4;
+	text-shadow: 2px 2px 4px #000000;
 }
-.border {
+.border-gray {
 	background-color:#111;
 	color:#fff;
 	padding:13px;
 	border-radius:25px;
+	z-index:9;
 }
 .ptext {
 	position:absolute;
@@ -46,30 +80,70 @@ body, html {
 }
 .pimg2 {
 	background-image:url('../images/back2.png');
-	min-height:100%;
+	min-height:70%;
+}
+.pimg3 {
+	background-image:url('../images/vr.png');
+	min-height:70%;
+}
+.pimg4 {
+	background-image:url('../images/lowpoly.png');
+	min-height:70%;
+}
+.pimg5 {
+	background-image:url('../images/anim.png');
+	min-height:70%;
 }
 .title {
 	font-size:30px;
-	animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+}
+.fadein2 {
+	opacity:0;
+	animation: fadein2 1s ease-in 1s forwards;
+    -moz-animation: fadein 1s ease-in 1s forwards; /* Firefox */
+    -webkit-animation: fadein 1s ease-in 1s forwards; /* Safari and Chrome */
+    -o-animation: fadein 1s ease-in 1s forwards; /* Opera */
+}
+.fadein5 {
+	opacity:0;
+	animation: fadein 3s 2s forwards;
+    -moz-animation: fadein 3s 2s forwards; /* Firefox */
+    -webkit-animation:fadein 3s 2s forwards; /* Safari and Chrome */
+    -o-animation:fadein 3s 2s forwards; /* Opera */
 }
 .slider {
-	animation: fadein 2s;
+	animation: drop 4s;
 	position:fixed;
 	width:100%;
-	min-height:20px;
+	min-height:0;
 	padding:20px;
 	padding-right:100px;
 	z-index: 10;
-	text-align: right;
 }
 .circleImage {
 	width:200px;
 	height:200px;
 	padding-bottom:20;
 	border-radius:50%;
+}
+.intro {
+	background-color:#123;
+	border-radius:0;
+	width:400px;
+	margin:auto;
+	margin-top:30px;
+	color:#FFF;
+	text-align:left;
+	padding:10px;
+	border-radius:5px;
+}
+.gameTitle {
+	background-color:#111;
+	color:#fff;
+	padding:13px;
+	z-index:9;
+	top:25%;
+	text-align:center;
 }
 @keyframes drop {
 	from {
@@ -111,4 +185,11 @@ body, html {
     to {
         opacity: 1;
     }
+}
+
+#arrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color:transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 30px;
 }
