@@ -4,13 +4,13 @@ body, html {
 	padding:0;
 	/*background:#222;*/
 	font-size:16px;
-	font-family:"Lato", sans-serif;
+	font-family:"Lucida Console", Monaco, monospace;
 	font-weight: 400;
 	line-height:1.8em;
 }
 .pimg1, .pimg2 {
 	position:relative;
-	opacity:0.7;
+	opacity:0.8;
 	background-position:center;
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -31,19 +31,84 @@ body, html {
 .border {
 	background-color:#111;
 	color:#fff;
-	padding:20px;
+	padding:13px;
+	border-radius:25px;
 }
 .ptext {
 	position:absolute;
-	top:50%;
+	top:25%;
 	width:100%;
 	text-align:center;
 }
 .pimg1 {
-	background-image:url('../images/back1.png');
+	background-image:url('../images/back1.jpg');
 	height:100%;
 }
 .pimg2 {
 	background-image:url('../images/back2.png');
 	min-height:100%;
+}
+.title {
+	font-size:30px;
+	animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+.slider {
+	animation: fadein 2s;
+	position:fixed;
+	width:100%;
+	min-height:20px;
+	padding:20px;
+	padding-right:100px;
+	z-index: 10;
+	text-align: right;
+}
+.circleImage {
+	width:200px;
+	height:200px;
+	padding-bottom:20;
+	border-radius:50%;
+}
+@keyframes drop {
+	from {
+		max-height:0;
+	}
+	to {
+		max-height:100px;
+	}
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
