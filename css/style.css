@@ -32,6 +32,9 @@ body, html {
 	height:0;
 	border-style:solid;
 }
+.app-button {
+	width:20px;
+}
 .slide-content{
 	display:flex;
 	flex-direction: column;
@@ -144,6 +147,13 @@ body, html {
 	z-index:9;
 	top:25%;
 	text-align:center;
+}
+.card {
+	max-width:600px;
+	margin: 20px;
+}
+.container {
+	align-items:center;
 }
 @keyframes drop {
 	from {
