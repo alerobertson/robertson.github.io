@@ -22,7 +22,7 @@ function displayGhibli(movies) {
 	
 	movies.forEach(movie => {
 		const card = document.createElement('div');
-		card.setAttribute('class', 'card border-gray');
+		card.setAttribute('class', 'card fadein2');
 		
 		const h1 = document.createElement('h1');
 		h1.textContent = movie.title;
