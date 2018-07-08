@@ -173,13 +173,19 @@ h1 {
 	margin:0;
 	height:50px;
 }
-p {
+.movie-description {
 	background-color:#eaecfc;
 	margin:0;
 	padding:20px;
 	height:300px;
 	border-radius: 0 0 20px 20px;
 	font-family:'Dosis', sans-serif;
+}
+.people {
+	font-weight:bold;
+	text-align:center;
+	font-style:italic;
+	color:#01296F;
 }
 @keyframes drop {
 	from {
